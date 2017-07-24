@@ -1,0 +1,1 @@
+Reference URL - http://www.expertphp.in/article/api-authentication-using-jwt-in-laravel-5-4-tutorial-with-example
