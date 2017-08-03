@@ -34,6 +34,14 @@ class UserController extends Controller
         }
         return response()->json(compact('token'));
     }
+
+
+    public function getUsers()
+    {
+        return User::orderBy('created_at', 'desc')->get();
+    }
+
+
     public function getAuthUser(Request $request){
         $user = JWTAuth::toUser($request->token);
         return response()->json($user);

@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 */
 Route::post('auth/register', 'UserController@register');
 Route::post('auth/login', 'UserController@login');
+Route::get('get/users', 'UserController@getUsers');
 Route::group(['middleware' => 'jwt.auth'], function () {
     Route::get('user', 'UserController@getAuthUser');
 });
